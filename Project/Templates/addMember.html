@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="http://localhost:5000/addMember" method="POST">
+    <label for="username">name:</label><br>
+    <input type="text" id="username" name="Name"><br>
+    <label for="email">phone</label><br>
+    <input type="text" id="number" name="phone"><br>
+    <label for="number">turn of person who requested:</label><br>
+    <input type="number" id="no" name="turn"><br>
+    <label for="ID">amount of money:</label><br>
+    <input type="number" id="payment" name="monthlypay"><br>
+    <label for="ID">ID:</label><br>
+    <input type="number" id="ID" name="ID"><br>
+    <label for="username">Enter your city or villlage name:</label><br>
+    <input type="text" id="City" name="City"><br>
+    <input type="submit" value="Submit">
+    
+  </form>
+  <style>
+    a:link, a:visited {
+    
+      color: #000000;
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+   
+    </style> 
+<a href="http://127.0.0.1:5000/home">Back</a> 
+
+
+{% endblock content %} 

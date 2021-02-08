@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}   
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Group Type</th>
+      <th scope="col">Money,Members</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in viewC %}
+    <tr>
+      <th scope="row">{{loop.index}}</th>
+      <td>{{data.0}}</td>
+      <td>{{data.1}}</td>
+      <td>{{data.2}}</td>
+      <td>{{data.3}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<style>
+  a:link, a:visited {
+  
+    color: #000000;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+ 
+  </style> 
+<a href="http://127.0.0.1:5000/admin">Back</a> 
+
+{% endblock content %}

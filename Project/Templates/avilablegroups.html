@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}   
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">phone</th>
+      <th scope="col">turn</th>
+      <th scope="col">monthly payment.</th>
+      <th scope="col">ID.</th>
+      <th scope="col">City or Village.</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in avilablegroups %}
+    <tr>
+      <th scope="row">{{loop.index}}</th>
+      <td>{{data.0}}</td>
+      <td>{{data.1}}</td>
+      <td>{{data.2}}</td>
+      <td>{{data.3}}</td>
+      <td>{{data.4}}</td>
+      <td>{{data.5}}</td>
+
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<style>
+  a:link, a:visited {
+  
+    color: #000000;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+ 
+  </style> 
+<a href="http://127.0.0.1:5000/home">Back</a> 
+<a href="http://127.0.0.1:5000/social">    
+  Contact with your group</a> 
+
+{% endblock content %}
